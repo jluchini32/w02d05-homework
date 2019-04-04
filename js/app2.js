@@ -8,6 +8,8 @@ var op;
 var isOp = true;
 var isAdd = false;
 var isMinus = false;
+var isTimes = false;
+var isDivide = false;
 //Second Number
 var secondNum = 0;
 var secondNumResult = '';
@@ -46,9 +48,22 @@ $('.operator').on('click', function(){
     console.log('plus'); 
 
     }if (op === 'minus'){
+        isMinus = true;
         pickSecNum();
     console.log('minus'); 
+    
+    }if (op === 'times'){
+      isTimes = true;
+      pickSecNum();
+    console.log('times');
+
+    }if (op === 'divide'){
+      isDivide = true;
+      pickSecNum();
+    console.log('divide');
     }
+
+
   });  
 }
 
@@ -72,6 +87,17 @@ function pickSecNum(){
     total = parseInt(firstNumResult) - parseInt(secondNumResult); // converts from strings ie 1+2+3 = 123 rather than 6
     console.log('total is ' + total);
     }
+
+    if(isTimes = true) {
+    total = parseInt(firstNumResult) * parseInt(secondNumResult); // converts from strings ie 1+2+3 = 123 rather than 6
+    console.log('total is ' + total);
+    }
+
+    if(isDivide = true) {
+    total = parseInt(firstNumResult) / parseInt(secondNumResult); // converts from strings ie 1+2+3 = 123 rather than 6
+    console.log('total is ' + total);
+      }
+    
     }
 });
 }
