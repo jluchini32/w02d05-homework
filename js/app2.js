@@ -28,13 +28,13 @@ if(isFirstNum) {
 firstNum = $(this).attr('value');
 firstNumResult += firstNum;
     //testing
-    console.log('Fist num is ' + firstNum);
+    // console.log('Fist num is ' + firstNum);
     console.log('Fist num results is ' + firstNumResult);
     }
   });  
 }
 
-
+// $('#operator').appendfirstNumResult);
 
 function pickOperator(){
 
@@ -74,26 +74,27 @@ function pickSecNum(){
     secondNumResult += secondNum;
 
     //testing
-    console.log('second num is ' + secondNum);
+    // console.log('second num is ' + secondNum);
     console.log('second num results is ' + secondNumResult);
 
     if(isFirstNum === false) {
-    if(isAdd = true) {
+
+    if(isAdd === true) {
     total = parseInt(firstNumResult) + parseInt(secondNumResult); // converts from strings ie 1+2+3 = 123 rather than 6
     console.log('total is ' + total);
     }
 
-    if(isMinus = true) {
+    else if(isMinus === true) {
     total = parseInt(firstNumResult) - parseInt(secondNumResult); // converts from strings ie 1+2+3 = 123 rather than 6
     console.log('total is ' + total);
     }
 
-    if(isTimes = true) {
+    else if(isTimes === true) {
     total = parseInt(firstNumResult) * parseInt(secondNumResult); // converts from strings ie 1+2+3 = 123 rather than 6
     console.log('total is ' + total);
     }
 
-    if(isDivide = true) {
+    else if(isDivide === true) {
     total = parseInt(firstNumResult) / parseInt(secondNumResult); // converts from strings ie 1+2+3 = 123 rather than 6
     console.log('total is ' + total);
       }
