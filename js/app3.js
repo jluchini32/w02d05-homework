@@ -30,7 +30,7 @@ firstNumResult += firstNum;
     //testing
     // console.log('Fist num is ' + firstNum);
     console.log('First num results is ' + firstNumResult);
-    $('#first-number').append(firstNumResult);
+    $('#first-number').text(firstNumResult);
     }
   });  
 }
@@ -75,7 +75,7 @@ function pickSecNum(){
 
     secondNum = $(this).attr('value');
     secondNumResult += secondNum;
-
+    
     //testing
     // console.log('second num is ' + secondNum);
     console.log('second num results is ' + secondNumResult);
@@ -108,7 +108,7 @@ function pickSecNum(){
 }
 
 function totalResult(){
-$('.total').on('click', function(){
+$('#total').on('click', function(){
 
     console.log('total is ' + total);
     totalResult();
