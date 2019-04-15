@@ -16,6 +16,7 @@ var secondNumResult = '';
 var isSecondNum = true;
 //total 
 var total = 0;
+var totalResult = '';
 var isTotal = true;
 
 //------ Function
@@ -44,6 +45,7 @@ $('.operator').on('click', function(){
   isFirstNum = false; //--- disables first num after opperator is used
  
   op = $(this).attr('value');
+  $('#operator').text(op);
 
     if (op === 'plus'){
         isAdd = true;
@@ -75,7 +77,7 @@ function pickSecNum(){
 
     secondNum = $(this).attr('value');
     secondNumResult += secondNum;
-    
+    $('#second-number').text(secondNumResult);
     //testing
     // console.log('second num is ' + secondNum);
     console.log('second num results is ' + secondNumResult);
@@ -110,11 +112,15 @@ function pickSecNum(){
 function totalResult(){
 $('#total').on('click', function(){
 
-    console.log('total is ' + total);
-    totalResult();
-    });
-}
+  total = $(this).attr('value');
+  totalResult += total;
+  $('#total').text(totalResult); //$('#operator').text(op);
 
+    console.log('total is ' + total);
+
+    });
+
+}
 
 
 
@@ -122,3 +128,5 @@ $('#total').on('click', function(){
 //----
 pickFirstNum();
 pickOperator();
+totalResult();
+
