@@ -71,10 +71,8 @@ $('.operator').on('click', function(){
   });  
 }
 
-
 function pickSecNum(){
     $('.number').on('click', function() {
-
     secondNum = $(this).attr('value');
     secondNumResult += secondNum;
     $('#second-number').text(secondNumResult);
@@ -109,24 +107,33 @@ function pickSecNum(){
 });
 }
 
-function totalResult(){
-$('#total').on('click', function(){
+// function totalResult() {
+// $('#total').on('click', function(){
 
-  total = $(this).attr('value');
-  totalResult += total;
-  $('#total').text(totalResult); //$('#operator').text(op);
+//   total = $(this).attr('value');
+//   totalResult += total;
+//   $('#total').text(totalResult); //$('#operator').text(op);
+
+//     console.log('total is ' + total);
+
+//     });
+// }
+
+
+$('#button-total').on('click', function(){
+
+  // total = $(this).attr('total');
+  // totalResult += total;
+  console.log("CALC TOTAL")
+  $('#total').text(total); //$('#operator').text(op);
 
     console.log('total is ' + total);
 
     });
-
-}
-
 
 
 
 //----
 pickFirstNum();
 pickOperator();
-totalResult();
 
